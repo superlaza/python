@@ -1,0 +1,16 @@
+﻿sanmartin
+1		b	c	d	+	16	a		c	d
+2		b	c	d	+	17	a	b		d
+3	a		c	d	+	18	a	b		d
+4	a		c	d	+	19	a	b	c	
+5	a	b		d	+	20	a	b	c	
+6	a	b		d	+	21	a	b		d
+7	a	b	c		+	22	a	b		d
+8	a	b	c		+	23	a		c	d
+9	a	b		d	+	24	a		c	d
+10	a	b		d	+	25		b	c	d
+11	a		c	d	+	26		b	c	d
+12	a		c	d	+	27	a		c	d
+13		b	c	d	+	28	a		c	d
+14		b	c	d	+	29	a	b		d
+15	a		c	d	+	30	a	b		d

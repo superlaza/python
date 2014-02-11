@@ -1,0 +1,15 @@
+﻿1		b	c	d	+	16	a	b	c	
+2	a		c	d	+	17	a	b		d
+3	a	b		d	+	18	a		c	d
+4	a	b	c		+	19		b	c	d
+5	a	b		d	+	20	a		c	d
+6	a		c	d	+	21	a	b		d
+7		b	c	d	+	22	a	b	c	
+8	a		c	d	+	23	a	b		d
+9	a	b		d	+	24	a		c	d
+10	a	b	c		+	25		b	c	d
+11	a	b		d	+	26	a		c	d
+12	a		c	d	+	27	a	b		d
+13		b	c	d	+	28	a	b	c	
+14	a		c	d	+	29	a	b		d
+15	a	b		d	+	30	a		c	d

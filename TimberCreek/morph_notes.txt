@@ -1,0 +1,31 @@
+﻿*KEY IS TO MAKE HIGH RESOLUTION IMAGE USING MATRIX INTERPOLATION
+*Ideal Resolution is 2400x3200
+
+first convert the image to grayscale using rgb2gray, then convert to binary image with threshold level 0.75. Finally, apply the morphological operations
+
+
+input = 'C:\Users\Superlaza2\Documents\Grading\RawPNG\P2'
+output = 'C:\Users\Superlaza2\Documents\Grading\Preprocessed\P2'
+inputdir = dir(input);
+tic
+for index = 3:length(inputdir)-1
+temp = im2bw(rgb2gray(imread([input '\' inputdir(index).name])),0.75);
+answers = bwmorph(bwmorph(temp,'dilate',6),'erode',18);
+imwrite(temp+imcomplement(answers),[outputdir '\' num2str(index) '.png' ])
+end
+toc
+
+
+[optimizer,metric] = imregconfig('multimodal');
+movingRegisteredDefault = imregister(moving, fixed, 'affine', optimizer, metric);
+
+
+*I use a radius of 20px around 80 instead of 10px, which adds a total of 0.02 seconds to the find center algorithm.
+*Only the subset of the image where the circles are found is fed into the algortihm, so coordinates (2700:end, 1:end)
+[centersDark] = imfindcircles(marshallbw,[70 90],'ObjectPolarity','dark')
+
+>> moving2 = im2bw(rgb2gray(imread('C:\Users\Superlaza2\Desktop\2.jpg')),0.75);
+>> [centersFixed, radiiFixed] = imfindcircles(fixed(floor(size(fixed,1)*0.83):end,1:end),[60 100],'ObjectPolarity','dark');
+
+
+centersFixed(:,2) = centersFixed(:,2) + transpose(size(fixed,1)*0.83*[1 1])
